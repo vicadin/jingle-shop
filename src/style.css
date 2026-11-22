@@ -6,7 +6,7 @@
 @import 'css/timer.css';
 
 :root {
-  --color-bg: #102542;
+  --color-bg: #05182e;
   --color-text: #f8f5eb;
   --color-text-dark: #091a32;
 
@@ -44,11 +44,9 @@ body {
   line-height: 1.5;
   font-size: 1.5rem;
   color: var(--color-text);
-  background-color: #07182e;
-  background-image:
-    url('./images/stars.svg'), radial-gradient(ellipse at 50% 25%, #193c60 0%, #07182e 75%);
-
-  background-repeat: repeat, no-repeat;
+  background-color: var(--color-bg);
+  background-image: url('./images/stars.svg');
+  background-repeat: repeat;
   background-size:
     900px 900px,
     cover;
@@ -97,6 +95,8 @@ img {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 h1 {

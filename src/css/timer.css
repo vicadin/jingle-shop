@@ -1,0 +1,194 @@
+.timer-wrap {
+  position: relative;
+
+  .decor-left,
+  .decor-right {
+    position: absolute;
+
+    @media only screen and (max-width: 980px) {
+      display: none;
+    }
+  }
+
+  .decor-left {
+    width: 80%;
+    left: -80px;
+    bottom: -50%;
+    z-index: 3;
+    transform: rotate(5deg);
+
+    filter: brightness(0.75) saturate(0.7) drop-shadow(0 8px 8px rgba(0, 10, 30, 0.45));
+
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  .decor-right {
+    right: -220px;
+    bottom: -120%;
+    z-index: 1;
+
+    filter: brightness(0.75) saturate(0.7) drop-shadow(0 8px 8px rgba(0, 10, 30, 0.45));
+
+    opacity: 0.9;
+    pointer-events: none;
+  }
+}
+
+.timer {
+  position: relative;
+  display: flex;
+  gap: 15px;
+  padding: 18px 24px;
+  z-index: 2;
+
+  @media only screen and (max-width: 560px) {
+    gap: 10px;
+    padding: 10px 10px;
+  }
+}
+
+.timer::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  background: url('../images/christmas-timer-lights.svg') center / 100% 100% no-repeat;
+  pointer-events: none;
+
+  @media only screen and (max-width: 490px) {
+    display: none;
+  }
+}
+
+.timer__item {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+
+  @media only screen and (max-width: 560px) {
+    gap: 10px;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+  }
+
+  background:
+    linear-gradient(145deg, #263750, #101c30 75%) padding-box,
+    conic-gradient(
+        from 210deg,
+        rgba(255, 191, 113, 0.15),
+        rgba(255, 211, 145, 0.9) 15%,
+        rgba(255, 191, 113, 0.2) 30%,
+        rgba(255, 191, 113, 0.1) 50%,
+        rgba(255, 211, 145, 0.75) 70%,
+        rgba(255, 191, 113, 0.15) 100%
+      )
+      border-box;
+
+  border: 1px solid transparent;
+  border-radius: 14px;
+
+  box-shadow:
+    inset 0 1px 5px rgba(255, 211, 145, 0.15),
+    0 0 8px rgba(255, 174, 77, 0.12),
+    0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.timer__item::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  padding: 3px;
+  pointer-events: none;
+
+  background: conic-gradient(
+    from 210deg,
+    rgba(255, 191, 113, 0.1),
+    rgba(255, 211, 145, 0.9) 15%,
+    rgba(255, 191, 113, 0.15) 30%,
+    transparent 50%,
+    rgba(255, 211, 145, 0.8) 70%,
+    rgba(255, 191, 113, 0.1) 100%
+  );
+
+  /* Keep only the border-shaped area */
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  filter: blur(7px);
+  opacity: 0.8;
+}
+
+.timer__item > * {
+  position: relative;
+  z-index: 1;
+}
+
+.timer__number {
+  color: var(--color-accent);
+  font-size: clamp(32px, 5vw, 44px);
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+
+  text-shadow:
+    0 2px 2px rgba(0, 0, 0, 0.6),
+    0 0 12px rgba(255, 193, 105, 0.25);
+}
+
+.timer__label {
+  margin-top: 4px;
+  color: var(--color-text);
+  font-weight: 600;
+  letter-spacing: 1.5;
+  text-transform: uppercase;
+}
+
+/* Glowing Christmas lights */
+
+.timer__.timer::before,
+.timer__.timer::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  pointer-events: none;
+
+  background: radial-gradient(circle, #fff8cf 0 2px, #ffd38c 3px, transparent 5px) left center /
+    26px 12px repeat-x;
+
+  filter: drop-shadow(0 0 3px #ffb94d) drop-shadow(0 0 6px #ffad36);
+}
+
+.timer__.timer::before {
+  top: -7px;
+}
+
+.timer__.timer::after {
+  bottom: -7px;
+}
+
+/*TODO*/
+
+@media (max-width: 480px) {
+  .timer__title {
+    font-size: 2rem;
+    letter-spacing: 2;
+  }
+
+  .timer__.timer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timer__number {
+    font-size: 3.6rem;
+  }
+}

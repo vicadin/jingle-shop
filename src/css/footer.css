@@ -1,9 +1,12 @@
 .footer {
-  background-image: url('./images/footer.webp');
+  background-image:
+    linear-gradient(to bottom, var(--color-bg), transparent 22%), url('./images/footer.webp');
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 550px;
 }
+
 .footer__content {
   display: flex;
   flex-direction: column;
