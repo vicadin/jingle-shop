@@ -1,0 +1,14 @@
+include _internalIncludes
+
+doctype html
+html(lang='en')
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width")
+    meta(name="description" content="An online store for Christmas goods and holiday gifts.")
+    link(rel="icon" href="images/favicon.ico" sizes="any")
+    script(type="module" src="/src/main.ts")
+    
+    block head
+    title= pageTitle || 'Jingle Shop'
+    body
+        block content
