@@ -2,25 +2,28 @@ import type { Product, ProductCategory } from '@/types/product.ts';
 import { renderCatalogControls } from '@/components/catalogControls.ts';
 import { renderProductCard } from '@/components/productCard.ts';
 
+export function renderCatalogResults(products: readonly Product[]): string {
+  if (products.length === 0) {
+    return `
+      <div class="empty-state" id="catalog-empty-state">
+        <h3 class="empty-state-title">No gifts found</h3>
+        <p class="empty-state-text">
+          No products match your current search or filter criteria.
+        </p>
+        <button type="button" class="reset-button" id="empty-reset-btn">
+          Reset Filters
+        </button>
+      </div>
+    `;
+  }
+
+  return `<div class="product-grid" id="product-grid">${products.map(renderProductCard).join('')}</div>`;
+}
+
 export function renderCatalogSection(
   products: readonly Product[],
   categories: readonly ProductCategory[],
 ): string {
-  const cardsMarkup =
-    products.length > 0
-      ? `<div class="product-grid" id="product-grid">${products.map(renderProductCard).join('')}</div>`
-      : `
-        <div class="empty-state" id="catalog-empty-state">
-          <h3 class="empty-state-title">No gifts found</h3>
-          <p class="empty-state-text">
-            No products match your current search or filter criteria.
-          </p>
-          <button type="button" class="reset-button" id="empty-reset-btn">
-            Reset Filters
-          </button>
-        </div>
-      `;
-
   return `
     <section aria-labelledby="catalog-heading">
       <div class="catalog-heading">
@@ -35,7 +38,7 @@ export function renderCatalogSection(
       </div>
 
       <div id="catalog-results">
-        ${cardsMarkup}
+        ${renderCatalogResults(products)}
       </div>
     </section>
   `;
