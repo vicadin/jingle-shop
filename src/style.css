@@ -1,6 +1,19 @@
 :root {
-  --color-bg: #faf8f5;
-  --color-text: #1c1b18;
+  --bg-night: #081b33;
+  --bg-night-soft: #0f2947;
+  --surface-ivory: #f7f3eb;
+  --surface-panel: rgba(15, 41, 71, 0.85);
+  --text-light: #f8f5ee;
+  --text-light-muted: #b6c4d4;
+  --text-dark: #112238;
+  --text-dark-muted: #4b5d70;
+  --text-kicker: #2c5f73;
+  --gold: #dfb15b;
+  --gold-hover: #ecc374;
+  --border-night: rgba(223, 177, 91, 0.28);
+  --border-card: rgba(17, 34, 56, 0.08);
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 }
 
 *,
@@ -12,13 +25,69 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family:
-    system-ui,
-    -apple-system,
-    'Segoe UI',
-    Roboto,
-    sans-serif;
+  font-family: var(--font-sans);
   line-height: 1.5;
-  color: var(--color-text);
-  background-color: var(--color-bg);
+  color: var(--text-light);
+  background: radial-gradient(circle at top center, #123358 0%, var(--bg-night) 65%);
+}
+
+.page-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-night);
+  margin-bottom: 2.5rem;
+}
+
+.brand-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text-light);
+}
+
+.brand-subtitle {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  color: var(--text-light-muted);
+}
+
+.cart-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  background-color: var(--gold);
+  color: var(--text-dark);
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.cart-trigger:hover {
+  background-color: var(--gold-hover);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
