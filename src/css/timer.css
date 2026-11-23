@@ -1,40 +1,25 @@
-.timer-wrap {
+.timer__stage {
+  display: grid;
+  place-items: center;
   position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
-  .decor-left,
-  .decor-right {
+  .decor {
     position: absolute;
+    bottom: max(-115px, calc(137px - 20vw));
+    width: 230%;
+    max-width: calc(100vw - 32px);
+    height: auto;
+    z-index: 3;
+  }
 
-    @media only screen and (max-width: 980px) {
+  @media (max-width: 1120px) {
+    .decor {
       display: none;
     }
   }
-
-  .decor-left {
-    width: 80%;
-    left: -80px;
-    bottom: -50%;
-    z-index: 3;
-    transform: rotate(5deg);
-
-    filter: brightness(0.75) saturate(0.7) drop-shadow(0 8px 8px rgba(0, 10, 30, 0.45));
-
-    opacity: 1;
-    pointer-events: none;
-  }
-
-  .decor-right {
-    right: -220px;
-    bottom: -120%;
-    z-index: 1;
-
-    filter: brightness(0.75) saturate(0.7) drop-shadow(0 8px 8px rgba(0, 10, 30, 0.45));
-
-    opacity: 0.9;
-    pointer-events: none;
-  }
 }
-
 .timer {
   position: relative;
   display: flex;
