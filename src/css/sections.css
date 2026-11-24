@@ -23,7 +23,7 @@
 
 .section-hero {
   background-image:
-    linear-gradient(to bottom, transparent 72%, var(--color-bg)), url('./images/hero.webp');
+    linear-gradient(to bottom, transparent 72%, var(--color-bg)), url('/images/hero.webp');
   background-position: center, center;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
@@ -123,7 +123,7 @@ section-best__cards {
 .section-timer {
   background:
     linear-gradient(to bottom, var(--color-bg), transparent 18%, transparent 72%, var(--color-bg)),
-    url('../images/timer.webp') center / cover no-repeat;
+    url('/images/timer.webp') center / cover no-repeat;
 
   padding-top: 20px;
   padding-bottom: 80px;
