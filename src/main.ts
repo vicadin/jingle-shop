@@ -52,7 +52,7 @@ if (catalog) {
 
   overlay.addEventListener('click', (event) => {
     const target = event.target;
-    if (!(target instanceof HTMLElement)) {
+    if (!(target instanceof Element)) {
       return;
     }
 
