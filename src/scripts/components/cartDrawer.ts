@@ -78,6 +78,9 @@ export function renderCartDrawerContent(items: readonly CartItem[]): string {
           <span>Total</span>
           <span class="cart-total-value">${formatPrice(totalPrice)}</span>
         </div>
+        <a href="cart.html" class="btn cart-open-page-btn" id="open-cart-page-btn">
+          Go to Cart
+        </a>
       </div>
     </div>
   `;

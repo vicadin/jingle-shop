@@ -5,7 +5,9 @@ import type { CartItem } from '@/scripts/types/cart.ts';
 import {
   addToCart,
   getCartItemCount,
+  loadCartFromStorage,
   removeFromCart,
+  saveCartToStorage,
   updateCartItemQuantity,
 } from '@/scripts/utils/cart';
 import {
@@ -18,7 +20,7 @@ import {
 
 export function initCatalog(catalog: HTMLElement): void {
   let filters = createDefaultFilters();
-  let cartItems: CartItem[] = [];
+  let cartItems: CartItem[] = loadCartFromStorage();
   let isCartOpen = false;
 
   catalog.innerHTML = `
@@ -61,6 +63,7 @@ export function initCatalog(catalog: HTMLElement): void {
   }
 
   function updateCartView(): void {
+    saveCartToStorage(cartItems);
     const count = getCartItemCount(cartItems);
 
     if (cartCount) {
@@ -69,10 +72,7 @@ export function initCatalog(catalog: HTMLElement): void {
     }
 
     cartButton?.setAttribute('aria-label', `Cart (${count} ${count === 1 ? 'item' : 'items'})`);
-    /*
-        if (cartCount) {
-          cartCount.textContent = String(getCartItemCount(cartItems));
-        }*/
+
     if (cartOverlay) {
       cartOverlay.hidden = !isCartOpen;
       if (isCartOpen) {
@@ -80,6 +80,8 @@ export function initCatalog(catalog: HTMLElement): void {
       }
     }
   }
+
+  updateCartView();
 
   filtersForm?.addEventListener('submit', (event) => {
     event.preventDefault();
