@@ -40,6 +40,5 @@ export function renderCatalogSection(
       <div id="catalog-results">
         ${renderCatalogResults(products, cartProductIds)}
       </div>
-    </section>
   `;
 }

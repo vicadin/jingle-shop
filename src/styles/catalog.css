@@ -1,5 +1,5 @@
 .catalog-heading {
-  background-image: url('./images/catalog-decor.webp');
+  background-image: url('/images/catalog-decor.webp');
   background-repeat: no-repeat;
   background-position: top left;
   background-size: clamp(160px, 24vw, 560px) auto;
@@ -38,7 +38,7 @@
   content: '';
   width: 80px;
   aspect-ratio: 100 / 30;
-  background: url('./images/flourish.svg') center / contain no-repeat;
+  background: url('/images/flourish.svg') center / contain no-repeat;
 }
 
 .catalog-heading__decoration::after {

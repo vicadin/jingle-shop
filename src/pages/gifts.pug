@@ -3,7 +3,6 @@ extends ../templates/layouts/layout
 block head
 
 block content
-    block content
     +header('gifts')
 
     main
@@ -11,9 +10,9 @@ block content
             .catalog-heading
                 hgroup.container.catalog-heading__content(aria-labelledby="catalog-heading")
                     p.section__subheader Winters Collection
-                    h1#catalog-heading Cristmas gifts
+                    h1#catalog-heading Christmas gifts
                     .catalog-heading__decoration(aria-hidden="true")
-                        img(src="./images/logo.svg" alt="")
+                        img(src="images/logo.svg" alt="")
     
         .catalog-inner.container#catalog
 
