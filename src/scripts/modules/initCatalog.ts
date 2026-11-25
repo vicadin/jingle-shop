@@ -24,7 +24,7 @@ export function initCatalog(catalog: HTMLElement): void {
   let isCartOpen = false;
 
   catalog.innerHTML = `
-  ${renderCatalogSection(PRODUCTS, PRODUCT_CATEGORIES)}
+  ${renderCatalogSection(PRODUCTS, PRODUCT_CATEGORIES, new Set(cartItems.map((item) => item.product.id)))}
   <div class="cart-overlay" id="cart-overlay" hidden></div>
 `;
 
@@ -41,10 +41,33 @@ export function initCatalog(catalog: HTMLElement): void {
   const cartCount = document.getElementById('cart-count');
   const cartOverlay = document.getElementById('cart-overlay');
 
+  function getCartProductIds(): Set<string> {
+    return new Set(cartItems.map((item) => item.product.id));
+  }
+
+  function syncCardButtons(): void {
+    const inCartIds = getCartProductIds();
+    const buttons = catalogResults?.querySelectorAll<HTMLButtonElement>('[data-add-to-cart]') ?? [];
+    buttons.forEach((button) => {
+      const id = button.dataset.addToCart;
+      if (!id) return;
+      const inCart = inCartIds.has(id);
+      button.classList.toggle('is-in-cart', inCart);
+      button.title = inCart ? 'In cart' : 'Add to cart';
+      const product = PRODUCTS.find((item) => item.id === id);
+      if (product) {
+        button.setAttribute(
+          'aria-label',
+          inCart ? `${product.name} is in cart` : `Add ${product.name} to cart`,
+        );
+      }
+    });
+  }
+
   function updateCatalogView(): void {
     const filteredProducts = filterAndSortProducts(PRODUCTS, filters);
     if (catalogResults) {
-      catalogResults.innerHTML = renderCatalogResults(filteredProducts);
+      catalogResults.innerHTML = renderCatalogResults(filteredProducts, getCartProductIds());
     }
     if (catalogCount) {
       const label = filteredProducts.length === 1 ? 'item' : 'items';
@@ -64,6 +87,7 @@ export function initCatalog(catalog: HTMLElement): void {
 
   function updateCartView(): void {
     saveCartToStorage(cartItems);
+    syncCardButtons();
     const count = getCartItemCount(cartItems);
 
     if (cartCount) {
@@ -136,7 +160,11 @@ export function initCatalog(catalog: HTMLElement): void {
       return;
     }
 
-    cartItems = addToCart(cartItems, product);
+    const alreadyInCart = cartItems.some((item) => item.product.id === product.id);
+    if (!alreadyInCart) {
+      cartItems = addToCart(cartItems, product);
+    }
+    isCartOpen = true;
     updateCartView();
   });
 

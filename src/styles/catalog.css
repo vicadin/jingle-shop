@@ -238,7 +238,8 @@
     height: 1.15rem;
   }
 }
-.add-to-cart-btn:hover {
+.add-to-cart-btn:hover,
+.add-to-cart-btn.is-in-cart {
   background-color: var(--color-accent);
   color: var(--color-text-dark);
 }

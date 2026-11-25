@@ -2,7 +2,10 @@ import type { Product, ProductCategory } from '../types/product';
 import { renderCatalogControls } from '@/scripts/components/catalogControls';
 import { renderProductCard } from '@/scripts/components/productCard';
 
-export function renderCatalogResults(products: readonly Product[]): string {
+export function renderCatalogResults(
+  products: readonly Product[],
+  cartProductIds: ReadonlySet<string> = new Set(),
+): string {
   if (products.length === 0) {
     return `
       <div class="empty-state" id="catalog-empty-state">
@@ -17,12 +20,15 @@ export function renderCatalogResults(products: readonly Product[]): string {
     `;
   }
 
-  return `<div class="product-grid" id="product-grid">${products.map(renderProductCard).join('')}</div>`;
+  return `<div class="product-grid" id="product-grid">${products
+    .map((product) => renderProductCard(product, cartProductIds.has(product.id)))
+    .join('')}</div>`;
 }
 
 export function renderCatalogSection(
   products: readonly Product[],
   categories: readonly ProductCategory[],
+  cartProductIds: ReadonlySet<string> = new Set(),
 ): string {
   return `
       ${renderCatalogControls(categories)}
@@ -32,7 +38,7 @@ export function renderCatalogSection(
       </div>
 
       <div id="catalog-results">
-        ${renderCatalogResults(products)}
+        ${renderCatalogResults(products, cartProductIds)}
       </div>
     </section>
   `;
