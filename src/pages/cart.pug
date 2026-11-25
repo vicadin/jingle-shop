@@ -1,13 +1,20 @@
 extends ../templates/layouts/layout
 
 block head
+    - var pageTitle = 'Your Cart — Jingle Shop'
 
 block content
-    block content
     +header()
 
-    main#cart
+    main
+        section.cart-section
+            .cart-heading
+                hgroup.container.cart-heading__content(aria-labelledby="cart-heading")
+                    p.section__subheader Your Cart
+                    h1#cart-heading Your Cart
+                    .cart-heading__decoration(aria-hidden="true")
+                        img(src="images/logo.svg" alt="")
 
+            .cart-page.container#cart
 
-    
     +footer#contacts
