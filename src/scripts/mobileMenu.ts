@@ -4,7 +4,6 @@ const navLinks = nav?.querySelectorAll<HTMLAnchorElement>('.nav-list__link') ?? 
 const logo = document.querySelector<HTMLAnchorElement>('.logo');
 const body = document.body;
 const desktopWidth: MediaQueryList = window.matchMedia('(min-width: 769px)');
-console.log('button', button);
 
 const classToggle = (): void => {
   button?.classList.toggle('open');
@@ -19,9 +18,7 @@ const closeMenu = (): void => {
 };
 
 export default (): void => {
-  console.log('clicked');
   button?.addEventListener('click', classToggle);
-  console.log(button);
 
   const links: HTMLAnchorElement[] = [...navLinks, ...(logo ? [logo] : [])];
 

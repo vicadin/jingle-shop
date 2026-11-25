@@ -160,20 +160,3 @@
 .timer__.timer::after {
   bottom: -7px;
 }
-
-/*TODO*/
-
-@media (max-width: 480px) {
-  .timer__title {
-    font-size: 2rem;
-    letter-spacing: 2;
-  }
-
-  .timer__.timer {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .timer__number {
-    font-size: 3.6rem;
-  }
-}

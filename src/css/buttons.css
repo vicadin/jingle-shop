@@ -17,18 +17,7 @@
     }
   }
 }
-/*
-.btn::after {
-    content: "→";
-    display: inline-block;
-    margin-left: 12px;
-    transition: transform 0.3s ease;
-}
 
-.btn:hover::after {
-    transform: translateX(5px);
-}
-*/
 .burger-menu {
   display: none;
   border: none;
