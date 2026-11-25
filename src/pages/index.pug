@@ -1,0 +1,45 @@
+extends ../templates/layouts/layout
+
+block head
+
+block content
+    block content
+    +header('index')
+
+    main
+        section.section-hero
+            .container.section-hero__content
+                p.section-hero__subheader Merry Christmas
+                h1.section-hero__header GIFT YOURSELF <br> THE MAGIC OF <br> <span>NEW POSSIBILITIES </span>          
+                p.section-hero__text Unique gifts for well-being, balance <br> and inspiration in the new year.
+                a(href="gifts.html").btn Explore Magical Gifts
+
+        section.section-about.container#about
+            .section-about__content
+                .section-about__left-col
+                    p.section-about__text_sm About
+                    h2.section__header Section about makers here?
+                    p.section-about__text This New Year marks the beginning of your journey to inner harmony and new strengths. We offer unique gifts that will help you improve your life.
+                    p.section-about__text This New Year marks the beginning of your journey to inner harmony and new strengths. We offer unique gifts that will help you improve your life.
+                    p.section-about__text This New Year marks the beginning of your journey to inner harmony and new strengths. We offer unique gifts that will help you improve your life.
+
+                .section-about__right-col
+                    img(src="images/santa.webp", alt="santa")
+        section.section-decor
+            .section-decor
+        section.section-timer
+            .section-timer__content.container
+                p.section__subheader The New Year is Coming Soon...
+                h2.section__header COUNTDOWN TO New Year
+                .timer__stage
+                    img(src="images/timer-frame.webp", alt="decor").decor
+                    .section-timer__timer#timer
+                        +timer()
+
+        section.section-best.container#best
+            p.section__subheader Best Gifts
+            h2.section__header especially for you
+            .section-best__cards#cards
+
+    
+    +footer#contacts

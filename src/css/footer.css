@@ -1,0 +1,132 @@
+.footer {
+  background-image:
+    linear-gradient(to bottom, var(--color-bg), transparent 22%), url('/images/footer.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 550px;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  height: 100%;
+
+  .copyright {
+    line-height: 148%;
+    margin-bottom: 12px;
+  }
+
+  .link {
+    font-family: Allura, sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    line-height: 100%;
+
+    &:hover {
+      color: var(--color-bg-hover);
+    }
+  }
+}
+
+.footer__contacts {
+  width: 100%;
+  max-width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  grid-auto-rows: minmax(100px, auto);
+  column-gap: 20px;
+  row-gap: 15px;
+  margin-bottom: 30px;
+  font-weight: 500;
+
+  @media only screen and (max-width: 1059px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  border-radius: 20px;
+  padding: 20px;
+
+  background: linear-gradient(145deg, rgb(57 79 109 / 55%), rgb(16 29 59 / 75%));
+  border: 1px solid rgb(214 233 255 / 18%);
+  box-shadow:
+    inset 0 0 20px rgb(214 233 255 / 9%),
+    0 8px 20px rgb(0 0 0 / 18%);
+
+  &:hover {
+    .footer__text {
+      color: var(--color-bg-hover);
+    }
+
+    svg {
+      stroke: var(--color-text);
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    gap: 12px;
+  }
+
+  svg {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.footer__text {
+  text-align: center;
+  letter-spacing: 1.28px;
+  line-height: 152%;
+  text-transform: uppercase;
+
+  .footer_lg {
+    letter-spacing: 3.84px;
+  }
+}
+
+.footer__bottom {
+  text-align: center;
+}
+
+.social {
+  display: flex;
+  column-gap: 14px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.social__link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    stroke: var(--color-text);
+    width: 24px;
+    height: 24px;
+    transition: var(--transition);
+  }
+
+  @media (pointer: fine) {
+    &:hover {
+      svg {
+        stroke: var(--color-bg-hover);
+      }
+    }
+  }
+}
