@@ -1,16 +1,16 @@
 import path from 'node:path';
 import { defineConfig } from 'vite';
-import vituum from 'vituum';
-import pug from '@vituum/vite-plugin-pug';
+/* import vituum from 'vituum';
+import pug from '@vituum/vite-plugin-pug'; */
 process.env.BROWSER = 'google-chrome';
 
 export default defineConfig(({ command }) => ({
-  plugins: [
+  /*   plugins: [
     vituum(),
     pug({
       root: './src',
     }),
-  ],
+  ], */
   base: command === 'build' ? '/jingle-shop/' : '/',
   resolve: {
     alias: {
