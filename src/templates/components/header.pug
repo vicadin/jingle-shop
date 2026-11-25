@@ -1,4 +1,7 @@
-mixin header(isIndex)
+mixin header(activePage)
+    - var isIndex = activePage === 'index'
+    - var isCart = activePage === 'cart'
+    - var isGifts = activePage === 'gifts' || !activePage
     header.header&attributes(attributes)
         .header__content.container
             a(href= isIndex ? "#" : "index.html").logo
@@ -11,14 +14,14 @@ mixin header(isIndex)
             nav.header__nav
                 ul.nav-list
                     li
-                        a(href=`gifts.html` class= !isIndex ? "active" : undefind).nav-list__link gifts
+                        a(href="gifts.html" class= isGifts ? "active" : undefined).nav-list__link gifts
                     li
                         a(href=isIndex ? "#about" : "index.html#about").nav-list__link about
                     li
                         a(href=isIndex ? "#best" : "index.html#best").nav-list__link best
                     li
                         a(href="#contacts").nav-list__link contacts
-            button(type="button" aria-label="Cart").header__cart#cart-button
+            button(type="button" aria-label="Cart" class= isCart ? "active" : undefined).header__cart#cart-button
                 include icons/cart.svg
                 span#cart-count.header__cart-count(hidden)
                 
