@@ -1,12 +1,10 @@
 import '@/style.css';
-import mobileMenu from './scripts/mobileMenu';
+import mobileMenu from './scripts/modules/mobileMenu';
+import { initCatalog } from './scripts/modules/initCatalog';
 
-const app = document.getElementById('app');
+mobileMenu();
 
-if (app) {
-  app.textContent = 'hi'; // todo
+const catalog = document.getElementById('catalog');
+if (catalog) {
+  initCatalog(catalog);
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  mobileMenu();
-});
