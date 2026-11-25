@@ -25,12 +25,6 @@ export function renderCatalogSection(
   categories: readonly ProductCategory[],
 ): string {
   return `
-    <section aria-labelledby="catalog-heading">
-      <div class="catalog-heading">
-        <p class="catalog-kicker">— Best Gifts —</p>
-        <h2 class="catalog-title" id="catalog-heading">Especially For You</h2>
-      </div>
-
       ${renderCatalogControls(categories)}
 
       <div class="catalog-meta">

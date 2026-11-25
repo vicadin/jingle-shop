@@ -18,5 +18,7 @@ mixin header(isIndex)
                         a(href=isIndex ? "#best" : "index.html#best").nav-list__link best
                     li
                         a(href="#contacts").nav-list__link contacts
-            a(href="#").header__cart
+            button(type="button" aria-label="Cart").header__cart#cart-button
                 include icons/cart.svg
+                span#cart-count.header__cart-count(hidden)
+                

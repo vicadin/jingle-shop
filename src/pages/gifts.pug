@@ -7,6 +7,15 @@ block content
     +header()
 
     main
+        section.catalog
+            .catalog-heading
+                hgroup.container.catalog-heading__content(aria-labelledby="catalog-heading")
+                    p.section__subheader Winters Collection
+                    h1#catalog-heading Cristmas gifts
+                    .catalog-heading__decoration(aria-hidden="true")
+                        img(src="./images/logo.svg" alt="")
+    
+        .catalog-inner.container#catalog
 
     
     +footer#contacts

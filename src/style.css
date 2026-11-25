@@ -17,6 +17,10 @@
 
   --transition: all ease-in 0.3s;
 
+  --color-card-start: #142d47;
+  --color-card-end: #0b1e34;
+  --color-card-border: rgba(248, 245, 235, 0.3);
+
   --bg-night: #081b33;
   --bg-night-soft: #0f2947;
   --surface-ivory: #f7f3eb;
@@ -137,17 +141,6 @@ h3 {
   line-height: 152%;
   margin-bottom: 10px;
   text-transform: uppercase;
-  /*TODO*/
-  font-family: var(--font-sans);
-  line-height: 1.5;
-  color: var(--text-light);
-  background: radial-gradient(circle at top center, #123358 0%, var(--bg-night) 65%);
-}
-
-.page-shell {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
 }
 
 .site-header {
