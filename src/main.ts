@@ -1,8 +1,6 @@
 import '@/style.css';
-import '@/styles/catalog.css';
-import '@/styles/cart.css';
-import mobileMenu from './scripts/mobileMenu';
-import { initCatalog } from './scripts/catalog';
+import mobileMenu from './scripts/modules/mobileMenu';
+import { initCatalog } from './scripts/modules/initCatalog';
 
 mobileMenu();
 

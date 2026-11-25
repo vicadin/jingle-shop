@@ -1,20 +1,20 @@
 import { PRODUCTS, PRODUCT_CATEGORIES } from '@/data/products.ts';
-import { renderCartDrawerContent } from '@/components/cartDrawer.ts';
-import { renderCatalogResults, renderCatalogSection } from '@/components/catalogSection.ts';
-import type { CartItem } from '@/types/cart.ts';
+import { renderCartDrawerContent } from '@/scripts/components/cartDrawer';
+import { renderCatalogResults, renderCatalogSection } from '@/scripts/components/catalogSection';
+import type { CartItem } from '@/scripts/types/cart.ts';
 import {
   addToCart,
   getCartItemCount,
   removeFromCart,
   updateCartItemQuantity,
-} from '@/utils/cart.ts';
+} from '@/scripts/utils/cart';
 import {
   createDefaultFilters,
   filterAndSortProducts,
   parsePriceInput,
   type CategoryFilter,
   type SortOrder,
-} from '@/utils/catalog.ts';
+} from '@/scripts/utils/catalog';
 
 export function initCatalog(catalog: HTMLElement): void {
   let filters = createDefaultFilters();

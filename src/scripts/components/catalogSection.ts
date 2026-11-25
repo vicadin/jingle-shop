@@ -1,6 +1,6 @@
-import type { Product, ProductCategory } from '@/types/product.ts';
-import { renderCatalogControls } from '@/components/catalogControls.ts';
-import { renderProductCard } from '@/components/productCard.ts';
+import type { Product, ProductCategory } from '../types/product';
+import { renderCatalogControls } from '@/scripts/components/catalogControls';
+import { renderProductCard } from '@/scripts/components/productCard';
 
 export function renderCatalogResults(products: readonly Product[]): string {
   if (products.length === 0) {

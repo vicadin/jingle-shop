@@ -1,5 +1,5 @@
-import type { ProductCategory } from '@/types/product.ts';
-import { escapeHtml } from '@/utils/format.ts';
+import type { ProductCategory } from '@/scripts/types/product.ts';
+import { escapeHtml } from '@/scripts/utils/format';
 
 export function renderCatalogControls(categories: readonly ProductCategory[]): string {
   const categoryOptions = categories

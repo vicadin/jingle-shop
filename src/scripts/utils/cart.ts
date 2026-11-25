@@ -1,5 +1,5 @@
-import type { CartItem } from '@/types/cart.ts';
-import type { Product } from '@/types/product.ts';
+import type { CartItem } from '@/scripts/types/cart.ts';
+import type { Product } from '@/scripts/types/product.ts';
 
 export function addToCart(items: readonly CartItem[], product: Product): CartItem[] {
   const existingItem = items.find((item) => item.product.id === product.id);

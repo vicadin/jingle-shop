@@ -1,4 +1,4 @@
-import type { Product, ProductCategory } from '@/types/product.ts';
+import type { Product, ProductCategory } from '@/scripts/types/product.ts';
 
 export type SortOrder = 'default' | 'price-asc' | 'price-desc';
 export type CategoryFilter = ProductCategory | 'all';

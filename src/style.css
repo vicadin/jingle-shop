@@ -1,9 +1,11 @@
-@import 'css/fonts.css';
-@import 'css/header.css';
-@import 'css/footer.css';
-@import 'css/buttons.css';
-@import 'css/sections.css';
-@import 'css/timer.css';
+@import 'styles/fonts.css';
+@import 'styles/header.css';
+@import 'styles/footer.css';
+@import 'styles/buttons.css';
+@import 'styles/sections.css';
+@import 'styles/timer.css';
+@import 'styles/cart.css';
+@import 'styles/catalog.css';
 
 :root {
   --color-bg: #05182e;

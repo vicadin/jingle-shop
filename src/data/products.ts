@@ -1,4 +1,4 @@
-import type { Product, ProductCategory } from '@/types/product.ts';
+import type { Product, ProductCategory } from '@/scripts/types/product.ts';
 
 export const PRODUCT_CATEGORIES: readonly ProductCategory[] = [
   'Ornaments',

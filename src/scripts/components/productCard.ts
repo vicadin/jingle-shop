@@ -1,6 +1,6 @@
-import type { Product } from '@/types/product.ts';
-import { escapeHtml, formatPrice } from '@/utils/format.ts';
-import cart from '../../src/templates/components/icons/cart.svg?raw';
+import type { Product } from '@/scripts/types/product.ts';
+import { escapeHtml, formatPrice } from '@/scripts/utils/format';
+import cart from '@/templates/components/icons/cart.svg?raw';
 
 export function renderProductCard(product: Product): string {
   const imageMarkup = product.image

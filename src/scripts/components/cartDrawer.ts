@@ -1,6 +1,6 @@
-import type { CartItem } from '@/types/cart.ts';
-import { getCartItemCount, getCartTotalPrice } from '@/utils/cart.ts';
-import { escapeHtml, formatPrice } from '@/utils/format.ts';
+import type { CartItem } from '@/scripts/types/cart.ts';
+import { getCartItemCount, getCartTotalPrice } from '@/scripts/utils/cart';
+import { escapeHtml, formatPrice } from '@/scripts/utils/format';
 
 export function renderCartDrawerContent(items: readonly CartItem[]): string {
   const totalCount = getCartItemCount(items);
