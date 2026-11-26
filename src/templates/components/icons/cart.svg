@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none" aria-labelledby="title" role="img">
+  <title id="title">Shopping cart</title>
+  <g stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 9h5l4.2 20.2a2.5 2.5 0 0 0 2.5 2h20.6"/>
+    <path d="M12 13h29l-3.5 13.5H14.3"/>
+    <circle cx="18" cy="38" r="2.3" fill="currentColor" stroke="none"/>
+    <circle cx="35" cy="38" r="2.3" fill="currentColor" stroke="none"/>
+    <path d="M26.5 16.4v6.8M23.1 19.8h6.8" stroke="currentColor" stroke-width="1.4"/>
+  </g>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="220" viewBox="0 0 1000 220" preserveAspectRatio="none"  fill="none" aria-label="Golden Christmas string lights frame with smaller bulbs and spacious center">
+<defs>
+  <linearGradient id="wire" x1="0" y1="0" x2="1000" y2="220" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#FFB95F"/><stop offset=".22" stop-color="#FFF1B7"/><stop offset=".5" stop-color="#B96B32"/><stop offset=".75" stop-color="#FFE0A0"/><stop offset="1" stop-color="#EA9B4A"/>
+  </linearGradient>
+  <radialGradient id="warm-halo">
+    <stop offset="0" stop-color="#FFF8D9" stop-opacity=".9"/>
+    <stop offset=".17" stop-color="#FFDD8A" stop-opacity=".72"/>
+    <stop offset=".4" stop-color="#FFAE43" stop-opacity=".36"/>
+    <stop offset=".72" stop-color="#F99034" stop-opacity=".11"/>
+    <stop offset="1" stop-color="#ED771C" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="wire-glow" x="-20%" y="-80%" width="140%" height="260%"><feGaussianBlur stdDeviation="2.8"/></filter>
+  <g id="bulb" transform="scale(.72)">
+    <circle r="20" fill="url(#warm-halo)"/>
+    <circle r="7" fill="#FFB657" opacity=".26"/>
+    <path d="M -8 0 H 8 M 0 -8 V 8" stroke="#FFCA7A" stroke-width=".8" opacity=".5"/>
+    <path d="M -5 0 H 5 M 0 -5 V 5" stroke="#FFF4D2" stroke-width=".9" opacity=".82"/>
+    <circle r="2.6" fill="#FFFBE9"/>
+    <circle r="1.1" fill="white"/>
+  </g>
+  <g id="bulb-dim" transform="scale(.76)">
+    <circle r="15" fill="url(#warm-halo)" opacity=".6"/>
+    <circle r="2.3" fill="#FFF1CE"/>
+    <path d="M -3.7 0 H 3.7 M 0 -3.7 V 3.7" stroke="#FFE8B7" stroke-width=".7" opacity=".7"/>
+  </g>
+</defs>
+<!-- wire glow beneath the fine line -->
+<path d="M 67 12 H 933 C 959 12 980 33 980 59 V 161 C 980 189 959 208 933 208 H 67 C 41 208 20 189 20 161 V 59 C 20 33 41 12 67 12 Z" stroke="#FFA343" stroke-width="5" opacity=".58" filter="url(#wire-glow)"/>
+<path d="M 67 12 H 933 C 959 12 980 33 980 59 V 161 C 980 189 959 208 933 208 H 67 C 41 208 20 189 20 161 V 59 C 20 33 41 12 67 12 Z" stroke="url(#wire)" stroke-width="1.7" opacity=".92"/>
+<path d="M 75 13 H 925" stroke="#FFF0BE" stroke-width=".55" opacity=".48"/>
+<path d="M 75 207 H 925" stroke="#FFE2A3" stroke-width=".7" opacity=".4"/>
+
+<use xlink:href="#bulb" transform="translate(80.0 12)"/>
+<use xlink:href="#bulb-dim" transform="translate(132.5 12)"/>
+<use xlink:href="#bulb" transform="translate(185.0 12)"/>
+<use xlink:href="#bulb" transform="translate(237.5 12)"/>
+<use xlink:href="#bulb-dim" transform="translate(290.0 12)"/>
+<use xlink:href="#bulb" transform="translate(342.5 12)"/>
+<use xlink:href="#bulb" transform="translate(395.0 12)"/>
+<use xlink:href="#bulb-dim" transform="translate(447.5 12)"/>
+<use xlink:href="#bulb" transform="translate(500.0 12)"/>
+<use xlink:href="#bulb" transform="translate(552.5 12)"/>
+<use xlink:href="#bulb-dim" transform="translate(605.0 12)"/>
+<use xlink:href="#bulb" transform="translate(657.5 12)"/>
+<use xlink:href="#bulb" transform="translate(710.0 12)"/>
+<use xlink:href="#bulb-dim" transform="translate(762.5 12)"/>
+<use xlink:href="#bulb" transform="translate(815.0 12)"/>
+<use xlink:href="#bulb" transform="translate(867.5 12)"/>
+<use xlink:href="#bulb-dim" transform="translate(920.0 12)"/>
+<use xlink:href="#bulb" transform="translate(80.0 208)"/>
+<use xlink:href="#bulb" transform="translate(132.5 208)"/>
+<use xlink:href="#bulb-dim" transform="translate(185.0 208)"/>
+<use xlink:href="#bulb" transform="translate(237.5 208)"/>
+<use xlink:href="#bulb" transform="translate(290.0 208)"/>
+<use xlink:href="#bulb" transform="translate(342.5 208)"/>
+<use xlink:href="#bulb-dim" transform="translate(395.0 208)"/>
+<use xlink:href="#bulb" transform="translate(447.5 208)"/>
+<use xlink:href="#bulb" transform="translate(500.0 208)"/>
+<use xlink:href="#bulb" transform="translate(552.5 208)"/>
+<use xlink:href="#bulb-dim" transform="translate(605.0 208)"/>
+<use xlink:href="#bulb" transform="translate(657.5 208)"/>
+<use xlink:href="#bulb" transform="translate(710.0 208)"/>
+<use xlink:href="#bulb" transform="translate(762.5 208)"/>
+<use xlink:href="#bulb-dim" transform="translate(815.0 208)"/>
+<use xlink:href="#bulb" transform="translate(867.5 208)"/>
+<use xlink:href="#bulb" transform="translate(920.0 208)"/>
+<use xlink:href="#bulb" transform="translate(44 20)"/>
+<use xlink:href="#bulb-dim" transform="translate(26 41)"/>
+<use xlink:href="#bulb" transform="translate(20 72)"/>
+<use xlink:href="#bulb" transform="translate(20 119)"/>
+<use xlink:href="#bulb-dim" transform="translate(20 166)"/>
+<use xlink:href="#bulb" transform="translate(29 191)"/>
+<use xlink:href="#bulb" transform="translate(48 203)"/>
+<use xlink:href="#bulb-dim" transform="translate(956 20)"/>
+<use xlink:href="#bulb" transform="translate(974 41)"/>
+<use xlink:href="#bulb" transform="translate(980 72)"/>
+<use xlink:href="#bulb-dim" transform="translate(980 119)"/>
+<use xlink:href="#bulb" transform="translate(980 166)"/>
+<use xlink:href="#bulb" transform="translate(971 191)"/>
+<use xlink:href="#bulb-dim" transform="translate(952 203)"/>
+</svg>

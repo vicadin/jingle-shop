@@ -1,0 +1,32 @@
+mixin footer
+    footer.footer&attributes(attributes)
+        .footer__content.container
+            .footer__contacts
+                a(href="tel:+375291112233").footer__contact
+                    include icons/phone.svg
+                    span.footer__text.footer__text_lg +375 (29) 111-22-33
+                    span.footer__text Call Us
+                a(href="https://maps.app.goo.gl/J6KTXZx5LPPoSAst8" target="_blank", rel="noopener noreferrer").footer__contact
+                    include icons/tree.svg
+                    span.footer__text.footer__text_lg Magic forest
+                    span.footer__text meet us
+                a(href="mailto:gifts@magic.com").footer__contact
+                    include icons/mail.svg
+                    span.footer__text.footer__text_lg gifts@magic.com
+                    span.footer__text write us
+
+            .footer__social.social
+                a(href="https://t.me" target="_blank", rel="noopener noreferrer").social__link
+                    include icons/telegram.svg
+                a(href="https://facebook.com", target="_blank", rel="noopener noreferrer").social__link
+                    include icons/fb.svg
+                a(href="https://instagramm.com", target="_blank", rel="noopener noreferrer").social__link
+                    include icons/insta.svg
+                a(href="https://twitter.com/", target="_blank", rel="noopener noreferrer").social__link
+                    include icons/x.svg
+
+            .footer__bottom
+                p.copyright © Copyright 2026, All Rights Reserved
+                a(href="https://rs.school/", target="_blank", rel="noopener noreferrer").link Made in Rolling Scopes School
+
+

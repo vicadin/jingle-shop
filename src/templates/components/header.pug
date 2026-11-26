@@ -1,0 +1,24 @@
+mixin header(isIndex)
+    header.header&attributes(attributes)
+        .header__content.container
+            a(href= isIndex ? "#" : "index.html").logo
+                img(src="images/logo.svg", alt="logo").logo__img
+                span.logo__text the gifts
+
+            button(type='button').burger-menu
+                span.burger-menu__line
+
+            nav.header__nav
+                ul.nav-list
+                    li
+                        a(href=`gifts.html` class= !isIndex ? "active" : undefind).nav-list__link gifts
+                    li
+                        a(href=isIndex ? "#about" : "index.html#about").nav-list__link about
+                    li
+                        a(href=isIndex ? "#best" : "index.html#best").nav-list__link best
+                    li
+                        a(href="#contacts").nav-list__link contacts
+            button(type="button" aria-label="Cart").header__cart#cart-button
+                include icons/cart.svg
+                span#cart-count.header__cart-count(hidden)
+                
