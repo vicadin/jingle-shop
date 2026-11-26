@@ -1,8 +1,7 @@
 import '@/style.css';
 import mobileMenu from './scripts/modules/mobileMenu';
 import { initCatalog } from './scripts/modules/initCatalog';
-// import mobileMenu from './scripts/mobileMenu';
-import { timer } from './Timer';
+import { timer } from './scripts/components/Timer';
 
 mobileMenu();
 
@@ -10,8 +9,6 @@ const catalog = document.getElementById('catalog');
 if (catalog) {
   initCatalog(catalog);
 }
-
-// mobileMenu();
 
 const timerContainer = document.getElementById('timer');
 

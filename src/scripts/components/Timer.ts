@@ -1,5 +1,5 @@
-import { createEl } from './createEl';
-import { getTime } from './formatTime';
+import { createEl } from '../utils/createEl';
+import { getTime } from '../utils/formatTime';
 
 const labels = ['days', 'hours', 'minutes', 'seconds'];
 
