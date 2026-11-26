@@ -100,11 +100,13 @@
   text-align: center;
 }
 
-section-best__cards {
+.section-best__cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+  gap: 14px;
   justify-content: center;
+  text-align: left;
+  padding-top: 50px;
 
   @media only screen and (max-width: 1438px) {
     grid-template-columns: repeat(2, 310px);
