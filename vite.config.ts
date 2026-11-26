@@ -6,7 +6,7 @@ process.env.BROWSER = 'google-chrome';
 
 export default defineConfig(({ command }) => ({
   plugins: [
-    vituum(),
+    vituum({ imports: { paths: [] } }),
     pug({
       root: './src',
     }),
