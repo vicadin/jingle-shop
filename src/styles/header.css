@@ -101,11 +101,15 @@
 .header__cart {
   position: relative;
   display: flex;
-  padding-top: 4px;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
   margin-left: 10px;
   background-color: transparent;
   border: none;
+  border-radius: 12px;
   cursor: pointer;
+  transition: var(--transition);
 
   svg {
     width: 35px;
@@ -120,6 +124,15 @@
     }
   }
 
+  &.active {
+    cursor: default;
+    background-color: var(--color-bg-hover);
+
+    svg {
+      color: var(--color-hover);
+    }
+  }
+
   @media only screen and (max-width: 768px) {
     order: -1;
   }
@@ -128,7 +141,7 @@
 .header__cart-count {
   position: absolute;
   top: 2px;
-  right: 0;
+  right: 2px;
   min-width: 18px;
   padding: 0 4px;
   box-sizing: border-box;

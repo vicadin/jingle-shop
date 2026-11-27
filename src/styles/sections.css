@@ -100,7 +100,7 @@
   text-align: center;
 }
 
-section-best__cards {
+.section-best__cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
