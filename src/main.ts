@@ -2,6 +2,7 @@ import '@/style.css';
 import { renderCartDrawerContent } from './scripts/components/cartDrawer';
 import { initCartPage, syncHeaderCartCount } from './scripts/modules/initCartPage';
 import { initCatalog } from './scripts/modules/initCatalog';
+import { timer } from './scripts/components/Timer';
 import mobileMenu from './scripts/modules/mobileMenu';
 import {
   loadCartFromStorage,
@@ -95,4 +96,10 @@ if (catalog) {
       updateDrawer();
     }
   });
+}
+
+const timerContainer = document.getElementById('timer');
+
+if (timerContainer) {
+  timerContainer.replaceChildren(timer());
 }
