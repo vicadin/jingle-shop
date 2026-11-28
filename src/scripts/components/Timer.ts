@@ -24,7 +24,6 @@ export const timer = (): HTMLElement => {
     const data = getTime(time); //  {days, hours, minutes, seconds}
 
     Object.entries(data).forEach(([_, val], index) => {
-      console.log('val', val);
       items[index].number.textContent = String(val);
     });
   };
