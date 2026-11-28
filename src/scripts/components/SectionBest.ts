@@ -1,13 +1,11 @@
 import { PRODUCTS } from '@/data/products.ts';
 import { getBestproducts } from '../modules/getBestProducts';
 import { renderProductCard } from '@/scripts/components/productCard';
-
-const data = [
-  { id: 'brass-star-topper', qty: '4' },
-  { id: 'wooden-nutcracker', qty: '3' },
-]; // from localstorage
+import { loadCartFromStorage } from '../utils/cart';
 
 export const sectionBestRender = (container: HTMLElement): void => {
-  const result = getBestproducts(PRODUCTS, data).map(renderProductCard);
+  const result = getBestproducts(PRODUCTS, loadCartFromStorage()).map((product) =>
+    renderProductCard(product),
+  );
   container.innerHTML = `${result.join('')}`;
 };

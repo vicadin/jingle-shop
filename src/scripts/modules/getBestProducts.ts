@@ -1,14 +1,19 @@
 import type { Product } from '@/scripts/types/product';
+import type { CartItem } from '@/scripts/types/cart';
 
 const getRandomIndex = (n: number): number => Math.floor(Math.random() * n);
 
-//args: products, storage {id, quantity} - ?
 export const getBestproducts = (
   products: readonly Product[],
-  data: { id: string; qty: string }[],
+  data: readonly CartItem[],
   cardsLength = 4,
 ): Product[] => {
-  const sortedIds = [...data].sort((a, b) => Number(b.qty) - Number(a.qty)).map((el) => el.id);
+  const sortedIds = [...data]
+    .sort((a, b) => Number(b.quantity) - Number(a.quantity))
+    .map((el) => {
+      console.log('el', el);
+      return el.product.id;
+    });
 
   const filtered = sortedIds
     .map((id) => products.find((product) => product.id === id))
