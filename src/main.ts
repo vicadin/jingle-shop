@@ -3,6 +3,8 @@ import { renderCartDrawerContent } from './scripts/components/cartDrawer';
 import { initCartPage, syncHeaderCartCount } from './scripts/modules/initCartPage';
 import { initCatalog } from './scripts/modules/initCatalog';
 import { timer } from './scripts/components/Timer';
+import { sectionBestRender } from './scripts/components/SectionBest';
+import { initCards } from './scripts/modules/initCards';
 import mobileMenu from './scripts/modules/mobileMenu';
 import {
   loadCartFromStorage,
@@ -15,6 +17,7 @@ mobileMenu();
 
 const catalog = document.getElementById('catalog');
 const cartPage = document.getElementById('cart');
+const cards = document.getElementById('cards');
 
 if (catalog) {
   initCatalog(catalog);
@@ -102,4 +105,10 @@ const timerContainer = document.getElementById('timer');
 
 if (timerContainer) {
   timerContainer.replaceChildren(timer());
+}
+
+console.log(cards);
+if (cards) {
+  sectionBestRender(cards);
+  initCards(cards);
 }
